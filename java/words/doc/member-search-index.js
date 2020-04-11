@@ -1,0 +1,1 @@
+memberSearchIndex = [{"l":"Example()","h":"","u":"%3Cinit%3E()"},{"l":"io()","h":"","u":""},{"l":"IO()","h":"","u":"%3Cinit%3E()"},{"l":"Item(String)","h":"","u":"%3Cinit%3E(java.lang.String)"},{"l":"main(String[])","h":"","u":"main(java.lang.String[])"},{"l":"num","h":"","u":""},{"l":"tmp","h":"","u":""},{"l":"word","h":"","u":""}]

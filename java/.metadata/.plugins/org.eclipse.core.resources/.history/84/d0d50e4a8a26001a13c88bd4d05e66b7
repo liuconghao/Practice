@@ -1,0 +1,24 @@
+package park;
+
+public class manager {
+	String pwd="";
+	park p= new park();
+	manager(){
+		this.pwd="123456";
+		p.file_in();
+	}
+	public void change_pwd(String NEW) {
+		pwd=NEW;
+	}
+	public void chenge_max(int a) {
+		p.change_smax(a);
+	}
+	public void parking(String str) {
+		p.in(str);
+	}
+	public String leaving(String str) {
+		return p.out(str);
+	}
+	public int fee()
+
+}

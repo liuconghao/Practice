@@ -1,0 +1,21 @@
+package park;
+
+import elements.Car;
+import elements.LinkedList;
+import elements.Stack;
+import io.In;
+
+public class park {
+	Stack<Car> place=new Stack<Car>();
+	LinkedList<Car> road=new LinkedList<Car>();
+	private int s_max=3;
+	private int s_count=0;
+	private int count=0;
+	void in() {
+		In in=new In();
+		in.
+	}
+	void out() {
+		
+	}
+}

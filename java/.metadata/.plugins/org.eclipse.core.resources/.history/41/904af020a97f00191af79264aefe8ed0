@@ -1,0 +1,15 @@
+/*
+ * @author:Lau
+ * @version:V1.0 
+ * Upgrade_date:2019/4/23
+ * 
+ * */
+
+public class Example{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Pig pig=new Pig();
+		pig.play();
+	}
+}

@@ -1,0 +1,37 @@
+package park;
+
+import elements.Car;
+
+public class manager {
+	private String pwd="";
+	private double price=1.0;
+	park p= new park();
+	manager(){
+		this.pwd="123456";
+		p.file_in();
+	}
+	public void change_pwd(String NEW) {
+		pwd=NEW;
+	}
+	public void chenge_max(int a) {
+		p.change_smax(a);
+	}
+	public void parking(String str) {
+		p.in(str);
+	}
+	public String leaving(String str) {
+		return p.out(str);
+	}
+	public double fee(Car o) {
+		double fee=0.0;
+		if (o.get_info()) {
+			long endtime = System.currentTimeMillis();
+			long usedtime = (endtime - o.time) / (1000 * 60);// 换算为分钟
+			if (usedtime  > 0) {
+				fee = usedtime * price;// 计算费用 ，向上取整
+			} 
+		}
+		return fee;
+	}
+
+}
