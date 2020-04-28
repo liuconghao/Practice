@@ -50,7 +50,7 @@ class NFA:
 class DFA:
     # 通过NFA对象N构造DFA
     def __init__(self, N):
-        print('---------开始使用子集法构造DFA---------')
+        print('---------子集法构造DFA开始---------')
         self.s0 = N.getClosure([0])  # 初态(list)
         self.Dstates = [self.s0]  # 存储DFA的状态
         self.DstatesFlag = [0]  # 记录状态是否被标记过，元素个数代表还未被标记的数目
@@ -80,22 +80,22 @@ class DFA:
             curIndex+=1 # 下标增1
 
         self.move = Dtran  # 构造状态转换函数（list套dict）
-        print('DFA的初态s0:',self.s0)
-        print('DFA的终态F:', self.F)
-        print('DFA的状态集Dstates:', self.Dstates)
-        print('DFA的状态转换矩阵Dtran:', self.move)
+        print('DFA的初态:',self.s0)
+        print('DFA的终态:', self.F)
+        print('DFA的状态集:', self.Dstates)
+        print('DFA的状态转换表:', self.move)
 
 if __name__ == '__main__':
 
-    print("---------即将开始收集用于构造NFA的初始数据，请按提示操作---------' ")
+    print("---------请按提示操作---------' ")
     # 构造NFA  开始
     print("请输入状态集S,输入格式如'[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]'.")
     S =  eval(input(":"))
-    s0 = int(input("请输入初态s0,如'0' :"))
-    F = int(input("请输入终态F,如'9' :"))
+    s0 = int(input("请输入初态,如'0' :"))
+    F = int(input("请输入终态,如'9' :"))
     print("请输入状态转移表('n'表示'ε'),输入格式如'[{'n':[1,7]},{'n':[2,4]},{'a':[3]},{'n':[6]},{'b':[5]},{'n':[6]},{'n':[1,7]},{'a':[8]},{'b':[9]},{}]'.")
     move = eval(input(":"))
     N = NFA(S, s0, F, move)
-    print("---------数据收集完毕，NFA构造完成---------' ")
+    print("---------NFA构造完成---------' ")
     # 构造NFA  结束
     D=DFA(N)#通过NFA对象N构造DFA
