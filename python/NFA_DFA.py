@@ -6,7 +6,6 @@ class NFA:
         self.s0 = s0  # 初态(int)
         self.F = F  # 终态(int)
         self.move = move  # 状态转换函数（list套dict）
-
     # 计算状态集T的n(代替ε)闭包U
     def getClosure(self, T):
         U = list()  # 闭包集合
@@ -28,11 +27,8 @@ class NFA:
                         U.append(x)
             # 如果不能转换
             else:
-                #print('不能转换，啥事都不干~')
                 pass
-        #print('返回闭包', U)
         return U
-
     # smove方法,T为初态集，n为待识别字符(str类型),返回转换后的状态集U
     def smove(self, T, n):
         U = list()  # 存储smove后的状态集
@@ -50,8 +46,6 @@ class NFA:
                 #print('不能转换，啥事都不干~')
                 pass
         return U
-
-
 # 构造DFA
 class DFA:
     # 通过NFA对象N构造DFA
@@ -90,8 +84,6 @@ class DFA:
         print('DFA的终态F:', self.F)
         print('DFA的状态集Dstates:', self.Dstates)
         print('DFA的状态转换矩阵Dtran:', self.move)
-
-
 
 if __name__ == '__main__':
 
