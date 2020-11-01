@@ -42,7 +42,7 @@ def m3u8(url):
         for i,j in enumerate(player_list):
             cryptor = AES.new(key, AES.MODE_CBC, key)
             res = requests.get(j,headers=headers)
-            with open(str(i+1) + '.ts','wb') as file:
+            with open('C:\\Users\\Luis\\Desktop'+str(i+1) + '.ts','wb') as file:
                 file.write(cryptor.decrypt(res.content))#将解密后的视频写入文件
                 print('正在写入第{}个文件'.format(i+1))
     else:
@@ -50,13 +50,13 @@ def m3u8(url):
         #print(player_list)#打印ts地址列表
         for i,j in enumerate(player_list):
             res = requests.get(j,headers=headers)
-            with open(str(i+1) + '.ts','wb') as file:
+            with open('C:\\Users\\Luis\\Desktop'+str(i+1) + '.ts','wb') as file:
                 file.write(res.content)
                 print('正在写入第{}个文件'.format(i+1))
         print('下载完成')
 #当全写下载完之后合并文件并删除所有.ts文件
 def merge_ts():
-    path = os.getcwd() #+ '\merge'#获取视频存放路径
+    path = 'C:\\Users\\Luis\\Desktop'
     filename_list=os.listdir(path)
     a=0
     for i in filename_list:
